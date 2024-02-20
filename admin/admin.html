@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title>
+            Админ панель
+        </title>
+        <meta
+            name="description"
+            content=""
+        />
+        <meta
+            name="keywords"
+            content=""
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <meta name="theme-color" content="#ffff" />
+
+
+        <link rel="stylesheet" type="text/css" href="./admin.css" />
+        <link rel="icon" href="../src/logo.jpg" />
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    </head>
+    <body class="body">
+        <div class="overflow">
+                
+        </div>
+        
+        <header class="header">
+            <img class="logo" src="../src/logo.jpg" alt="">
+            
+            <div class="main__menu">
+                <a href="./admin.html">
+                    <li class="">Добавить трек код</li>
+                </a>
+                <a href="./clients.html">
+                    <li class="">Клиенты</li>
+                </a>
+                <a href="./tracks.html">
+                    <li class="">Трек коды</li>
+                </a>
+                <a href="./del.html">
+                    <li class="">Удаленные трек коды</li>
+                </a>
+            </div>
+            
+           <div class="burger">
+               <ion-icon class="open" size="large" name="menu"></ion-icon>
+               <ion-icon class="close active" size="large" name="close"></ion-icon>
+            </div>
+            <div class="aura"></div>
+
+        </header>
+
+        
+
+        <div class="menuList">
+            <ul>
+                <a href="./admin.html">
+                    <li class="menuItems">Добавить трек код</li>
+                </a>
+                <a href="./clients.html">
+                    <li class="menuItems">Клиенты</li>
+                </a>
+                <a href="./tracks.html">
+                    <li class="menuItems">Трек коды</li>
+                </a>
+                <a href="./del.html">
+                    <li class="menuItems">Удаленные трек коды</li>
+                </a>
+                <div class="exit">
+                    Выйти
+                </div>
+            </ul>
+        </div>
+
+        <main class="main">
+
+            <div class="modal">
+               
+                <div class="selects__container">
+                    <div class="selects">
+                        <select class="pets" name="pets" id="pet__select">
+                            <option value="" id="optionStandart">Установите статус</option>
+                            <option value="option1">Поступило на склад в Китае</option>
+                            <option value="option2">В пути</option>
+                            <option value="option3">Поступило на склад в Алматы</option>                    
+                            <option value="option4">По филиалам</option>                    
+                            <option value="option5">Выдано клиенту</option>                    
+                                               
+                        </select>
+                        
+
+                        <select class="pets2" name="pets2" id="pet__select2" disabled>
+                            <option value="">Филиалы</option>
+                            <option value="optionR1">FST_GLAVNIY</option>
+                            <option value="optionR2">FST_KOLOS</option>
+                            <!-- <option value="optionR3">Туркестан</option>
+                            <option value="optionR4">Шымкент</option>
+                            <option value="optionR5">Орал</option>
+                            <option value="optionR6">Астана</option>
+                            <option value="optionR7">Кокшетау</option>
+                            <option value="optionR8">Караганды</option>
+                            <option value="optionR9">Жезказган</option>
+                            <option value="optionR10">Кызылорда</option>
+                            <option value="optionR11">Тараз</option>
+                            <option value="optionR12">Талдыкорган</option>
+                            <option value="optionR13">Атырау</option>
+                            <option value="optionR14">Актау</option>
+                            <option value="optionR15">Актобе</option>
+                            <option value="optionR16">Кызылту</option>
+                            <option value="optionR17">Жанаозен</option>
+                            <option value="optionR18">Павлодар</option>
+                            <option value="optionR19">Каскелен</option>
+                            <option value="optionR20">Узынагаш</option>
+                            <option value="optionR21">Меркi</option>
+                            <option value="optionR22">Балхаш</option>
+                            <option value="optionR23">Сатпаев</option> -->
+
+                        </select>
+                    </div>
+
+                    <div class="date__container">
+                    
+                        <label class="dateLabel" for="date">Выберите дату</label>
+                        <input type="date" id="date" name="date">
+                    
+                    </div>
+
+                </div>
+            
+
+                <!-- <button class="addTrackButton" type="button">Добавить трек</button> -->
+
+            </div>
+            
+            <div class="search__container">
+                <input class="search__input" type="text" id="trackInput" placeholder="Вставьте или пробейте трек код">
+            </div>
+
+            
+            
+
+            <script>
+                let inputElement = document.querySelector('.search__input');        
+                inputElement.focus();
+            </script>
+    
+            <div class="list__container">
+                <h1>Список посылок</h1>
+                <ol class="list__wrapper">
+                    
+                </ol>
+                
+             
+               
+            </div>  
+
+
+               
+        </main>
+        <script type="module">
+            import { showClass } from "./script/delete.js";
+          
+            window.importAndShowClass = function(element) {
+              showClass(element);
+            };
+        </script>
+        
+        <script type="module" src="./script/delete.js"></script>
+        <script src="./script/menu.js"></script>
+        <script type="module" src="./script/addParcels.js"></script>
+        <script type="module" src="./script/screenParcels.js"></script>
+        <script src="./script/accessPages.js"></script>
+        <script src="./script/exit.js"></script>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

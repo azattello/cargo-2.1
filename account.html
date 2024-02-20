@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title>
+            351 Логистика
+        </title>
+        <meta
+            name="description"
+            content="351 Логистика"
+        />
+        <meta
+            name="keywords"
+            content="351 Логистика"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <meta name="theme-color" content="#fff" />
+
+
+        <link rel="stylesheet" type="text/css" href="./css/main.css" />
+        <link rel="icon" href="./src/logo.jpg" />
+        <link rel="manifest" href="./manifest.json">
+
+
+
+       
+    </head>
+    <body class="body">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+        
+        <header class="header">
+            <h1>Аккаунт</h1>
+            <img src="./src/logo.jpg" alt="">
+        </header>
+        <p class="copyed">Трек номер скапирован</p>
+        <main class="account__main">
+            <div class="container__data">
+                <div class="data_el"><h3>Имя:</h3><p class="name el"></p></div>
+                <div class="data_el"><h3>Фамилия:</h3><p class="surname el"></p></div>
+                <div class="data_el"><h3>Номер телефона:</h3><p class="phone el" ></p></div>
+                <div class="data_el"><h3>Город:</h3><p class="city el" ></p></div>
+                <div class="data_el"><h3>Пароль:</h3><p class="passwd el"></p></div>
+            </div>
+            <!-- <div class="container__data">
+                <div class="data_el_adress"><h3>Контакты</h3></div>
+                <br>
+                
+                    <div class="contacts-div">
+                       <a class="contacts-a" href="tel:87027781734">
+                            <img class="img-svg" src="./src/call-outline.svg" alt="">
+                            
+                            <p class="b-space">87027781734</p>
+                        </a>
+                    </div>
+
+                    <div class="contacts-div">
+                        <a class="contacts-a" href="https://wa.link/z1zkfh">
+                             <img class="img-svg" src="./src/logo-whatsapp.svg" alt="">
+                             
+                             <p class="b-space">87027781734</p>
+                         </a>
+                     </div>
+
+                     <div class="contacts-div">
+                        <a class="contacts-a" href="https://www.instagram.com/ak_dani_cargo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                             <img class="img-svg" src="./src/logo-instagram.svg" alt="">
+                             
+                             <p class="b-space">@ak_dani_cargo</p>
+                         </a>
+                     </div>
+
+                  
+                
+            </div> -->
+            
+            <button type="button" class="exit">Выйти</button>
+
+
+        </main>
+
+        <div class="space"></div>
+        <div class="space"></div>
+
+
+        <footer class="footer">
+
+            <a href="./archive.html">
+                <ion-icon name="file-tray-full-outline"></ion-icon>
+                <p class="no-active">Получено</p>
+            </a>
+            <a href="./index.html">
+                <ion-icon  name="home-outline"></ion-icon>
+                <p class="no-active">Главная</p>
+            </a>
+            <a href="./account.html">
+                <ion-icon class="icon-active" name="person-circle"></ion-icon>
+                <p class="p-active">Аккаунт</p>
+            </a>
+        </footer>
+
+        <script>
+
+            // function copyText(textToCopy) {
+            //     navigator.clipboard.writeText(textToCopy).then(function() {
+            //     alert('Async: Copying to clipboard was successful!');
+            //     })
+                
+            // }
+
+            let clipboard = new ClipboardJS('.copyIcon');
+
+            clipboard.on('success', function (e) {
+                document.querySelector('.copyed').style.opacity = 1;
+                setTimeout(function () {
+                    document.querySelector('.copyed').style.opacity = 0;
+                }, 500);
+            });
+
+            clipboard.on('error', function (e) {
+                console.error('Unable to copy text: ', e);
+            });
+            
+        </script>
+
+        <script src="./js/access.js"></script>
+        <script type="module" src="./js/account.js"></script>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    </body>
+</html>
